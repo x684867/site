@@ -1,0 +1,194 @@
+<?php
+    $articleTitle="";
+    $articleAuthor="";
+    $articleKeywords="";
+    $articleDescription="";
+    $articleCopyright="";
+    $articleContent="";
+    $articleFooter="";
+    $menuContent="";
+    $certificationHTML="";
+?>
+<html>
+    <head>
+        <title>Sam Caldwell (samcaldwell.net):<?=$articleTitle;?></title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="content-language" content="en-US" />
+        <meta http-equiv="expires" content="21 August 1975 00:00:00 CDT" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta name="robots" content="all" />
+
+        <!--article-specific content tags-->
+        <meta name="author" content="<?=$articleAuthor;?>" />
+        <meta name="keywords" content="<?=$articleKeywords;?>" />
+        <meta name="description" content="<?=$articleDescription;?>" />
+        <meta name="copyright" content="<?=$articleCopyright;?>" />
+
+        <style type="text/css">
+            * {
+                font-family:arial;
+                font-size:10pt;
+                font-weight:normal;
+            }
+            h1{
+                font-size:18pt;
+                font-weight:bold;
+                text-decoration:none;
+                font-weight:bold;
+            }
+            h2{
+                font-size:16pt;
+                font-weight:bold;
+                text-decoration:none;
+                font-weight:bold;
+            }
+            h3{
+                font-size:14pt;
+                font-weight:bold;
+                text-decoration:none;
+                font-weight:bold;
+                font-style:italic;
+            }
+            h1#pageTitle{
+                font-size:18pt;
+                text-align:center;
+                text-decoration:none;
+                font-weight:bold;
+            } a {
+                font-size:inherit;
+                text-decoration:inherit;
+                color:#999999;
+                font-weight:inherit;
+            }
+            h2#pageTitle{
+                font-size:16pt;
+                text-align:center;
+                text-decoration:none;
+                font-weight:normal;
+            }
+            body {
+                background-color:#333333;
+                color:#C0C0C0;
+            }
+            #page {
+                width:1024px;
+                margin-left:10%;
+                margin-right:10%;
+                margin-top:20px;
+                margin-bottom:20px;
+                padding: 15px 15px 15px 15px;
+                border: 1px solid;
+                border-radius: 5px;
+                background-color:#FFFFFF;
+                color:#000000;
+            }
+            #footer{
+                margin-top:10px;
+                margin-bottom:10px;
+            }
+            #contentLeft{
+                min-width:200px;
+                max-width:200px;
+                height:800px;
+                border-radius:5px;
+                border-color:#C0C0C0;
+                border-width:1px;
+                border-style:solid;
+                overflow: auto;
+                float:left;
+                margin:4px 4px 4px 4px;
+                padding:2px 2px 2px 2px;
+            }
+            #contentRight{
+                min-width:calc(100% - 228px);
+                min-width:calc(100% - 228px);
+                height:800px;
+                border-radius:5px;
+                border-color:#C0C0C0;
+                border-width:1px;
+                border-style:solid;
+                overflow:auto;
+                float:right;
+                margin:4px 4px 4px 4px;
+                padding:2px 2px 2px 2px;
+
+            }
+            #spacer{
+                float:none;
+                clear:both;
+            }
+            #footer{
+                text-align:center;
+            }
+            #nav{
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <div id="header">
+                <div id="headerLeft">
+                    <span>&nbsp;</span>
+                </div>
+                <div id="headerCenter">
+                    <h1 id="pageTitle">
+                        Sam Caldwell (
+                        <a href="http://samcaldwell.net">
+                            SamCaldwell.net
+                        </a>)
+                    </h1>
+                    <h2 id="pageTitle">
+                        Systems & DevOps Engineer
+                    </h2>
+                </div>
+                <div id="headerRight">
+                    <!--placeholder-->
+                </div>
+            </div>
+            <div id="spacer">&nbsp;</div>
+            <div id="nav">
+                <!--this is a horizontal nav-->
+            </div>
+            <div id="content">
+                <div id="contentLeft">
+                    <div id="menu">
+                        <?=$menuContent;?>
+                    </div>
+                    <div id="certifications">
+                        <?=$certificationHTML;?>
+                    </div>
+                </div>
+                <div id="contentRight">
+                    <div id="articleTitle">
+                        <h1 id="articleTitle">
+                            <?=$articleTitle;?>
+                        </h1>
+                    </div>
+                    <div id="articleContent">
+                        <?=$articleContent;?>
+                    </div>
+                    <div id="articleFooter">
+                        <?=$articleFooter;?>
+                    </div>
+                </div>
+            </div>
+            <div id="spacer">&nbsp;</div>
+            <div id="footer">
+                <span>&copy; 2014 Sam Caldwell.</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>All Rights Reserved.</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>
+                    <a href="mailto:mail@samcaldwell.net">
+                        mail@samcaldwell.net
+                    </a>
+                </span>
+                <span>&nbsp;&nbsp;</span>
+                <span>(512) 963-7805</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>Round Rock, Texas 78664</span>
+            </div>
+        </div>
+    </body>
+</html>
