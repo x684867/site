@@ -1,0 +1,27 @@
+<xml>
+    <author>Sam Caldwell</author>
+    <copyright>&copy; 2014 Sam Caldwell.  All Rights Reserved.</copyright>
+    <keywords>
+        amazon aws ec2 swap linux troubleshooting how-to help
+    </keywords>
+    <description>
+        This article provides a solution of using a swap file to overcome
+        process death as a result of memory exhaustion in Linux cloud servers and suggests a long-term strategy of monitoring swap as a sign an environment needs to scale rather than monitoring RAM usage.
+    </description>
+    <title>Cheating Death: Overcoming the Lack of Swap in Amazon EC2</title>
+    <content>
+        <h1>Problem</h1>
+        <p>
+            Most virtualized environments correctly eliminate swap in their guest environments, but this leads to crashes in Amazon EC2 or Digital Ocean "cloud" hosting where the hosting provider places hard limits on memory.  Such crashes often are intended to force the customer to upgrade to larger (and more expensive) servers or to otherwise implement high availability for web applications.
+        </p>
+        <h1>Solution</h1>
+        <ul>
+            <li>Connect to the virtual guest using SSH and obtain root access (e.g. sudo su -).</li>
+            <li>Create a loopback device: `dd if=/dev/zero of=/swap`</li>
+            <li>Format the loop file as swap: `mkswap /swap`</li>
+            <li>Activate the swap: `swapon /swap`</li>
+            <li>Edit /etc/fstab: `echo "/swap swap swap defaults 0 0" >> /etc/fstab</li>
+        </ul>
+        <p>Need help implementing this strategy, email the author at mail@samcaldwell.net.</p>
+    </content>
+</xml>
